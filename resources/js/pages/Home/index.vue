@@ -1,5 +1,5 @@
 <template>
-    <div style="color:#adafca">
+    <div style="color:#adafca; max-width: 600px; text-align: center; margin-left: auto; margin-right: auto">
         <template v-if="step === 'login'">
             <div class="text-center">
                 <button class="btn btn-primary" @click="connectWallet" style="padding:15px 30px">Connect Wallet</button>

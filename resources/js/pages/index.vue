@@ -4,7 +4,7 @@
             Create Smart Art
         </div>
 
-        <div class="container" style="margin:20px 0">
+        <div class="container" style="margin-top:20px">
             <router-view></router-view>
         </div>
     </div>
