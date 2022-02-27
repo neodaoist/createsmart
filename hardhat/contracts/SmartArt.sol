@@ -4,6 +4,7 @@ pragma solidity ^0.8.4;
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
 import "@openzeppelin/contracts/token/ERC1155/extensions/ERC1155Burnable.sol";
+import "./ERC2981/ERC2981PerTokenRoyalties.sol";
 
 ///////////////////////////////////////////////////////////////////////////
 //                                                                       //
@@ -16,11 +17,14 @@ import "@openzeppelin/contracts/token/ERC1155/extensions/ERC1155Burnable.sol";
 //                                                                       //
 ///////////////////////////////////////////////////////////////////////////
 
-contract SmartArt is ERC1155, AccessControl, ERC1155Burnable {
+contract SmartArt is ERC1155, AccessControl, ERC1155Burnable, ERC2981PerTokenRoyalties {
     bytes32 public constant URI_SETTER_ROLE = keccak256("URI_SETTER_ROLE");
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
 
-    constructor() ERC1155("SMARTART") {
+    string public name = "SmartArt";
+    string public symbol = "SMARTART";
+
+    constructor() ERC1155("") {
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(URI_SETTER_ROLE, msg.sender);
         _grantRole(MINTER_ROLE, msg.sender);
@@ -49,7 +53,7 @@ contract SmartArt is ERC1155, AccessControl, ERC1155Burnable {
     function supportsInterface(bytes4 interfaceId)
         public
         view
-        override(ERC1155, AccessControl)
+        override(ERC1155, AccessControl, ERC2981Base)
         returns (bool)
     {
         return super.supportsInterface(interfaceId);
