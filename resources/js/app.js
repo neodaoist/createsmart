@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import routes from "~/includes/routes";
 import store from "~/includes/store";
+import Antd from 'ant-design-vue';
 
 /**
  * What we need to enable no matter what (bootstrap, axios)
@@ -12,6 +13,8 @@ require('bootstrap');
 window._ = require('lodash');
 
 window.axios = require('axios');
+
+window.filestack = require('filestack-js').init('AHeilUIFeQXueW4OEl7ccz');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -24,6 +27,8 @@ window.axios.defaults.withCredentials = true;
 window.Vue = Vue;
 
 Vue.use(VueRouter);
+
+Vue.use(Antd);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

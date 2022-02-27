@@ -2,3 +2,13 @@
 @import 'variables';
 // Bootstrap values
 @import "~bootstrap/scss/bootstrap";
+
+body {
+    background-color: #121619;
+}
+
+.form-control {
+    color:white!important;
+    background-color: #343a3f !important;
+    border: solid 1px #4b545b !important;
+}

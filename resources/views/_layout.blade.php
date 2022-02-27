@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <script src="https://kit.fontawesome.com/7ab10eaf6d.js" crossorigin="anonymous"></script>
+
+        <title>CreateSmart</title>
 
         <script type="text/javascript">
             window.api_url = "{{ config('app.url') }}/api";

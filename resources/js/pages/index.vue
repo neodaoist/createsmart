@@ -1,17 +1,16 @@
 <template>
-    <div style="border:solid 1px red; width:500px; margin-left:auto; margin-right: auto">
-        <div style="margin-bottom: 30px">
-            [Header page]
+    <div>
+        <div style="text-align: center; font-size: 3rem; color:white; padding:15px">
+            Create Smart Art
         </div>
 
-        <router-view></router-view>
-
-        <div style="margin-top: 30px">
-            [Footer]
+        <div class="container" style="margin:20px 0">
+            <router-view></router-view>
         </div>
     </div>
 </template>
 
 <script>
+
 export default {}
 </script>
