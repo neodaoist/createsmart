@@ -5,11 +5,22 @@ import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
 import "@openzeppelin/contracts/token/ERC1155/extensions/ERC1155Burnable.sol";
 
-contract SmartArtEditionOfN is ERC1155, AccessControl, ERC1155Burnable {
+///////////////////////////////////////////////////////////////////////////
+//                                                                       //
+//      ____                _         ____                       _       //
+//     / ___|_ __ ___  __ _| |_ ___  / ___| _ __ ___   __ _ _ __| |_     //
+//    | |   | '__/ _ \/ _` | __/ _ \ \___ \| '_ ` _ \ / _` | '__| __|    //
+//    | |___| | |  __/ (_| | ||  __/  ___) | | | | | | (_| | |  | |_     //
+//     \____|_|  \___|\__,_|\__\___| |____/|_| |_| |_|\__,_|_|   \__|    //
+//                                                                       //
+//                                                                       //
+///////////////////////////////////////////////////////////////////////////
+
+contract SmartArt is ERC1155, AccessControl, ERC1155Burnable {
     bytes32 public constant URI_SETTER_ROLE = keccak256("URI_SETTER_ROLE");
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
 
-    constructor() ERC1155("") {
+    constructor() ERC1155("SMARTART") {
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(URI_SETTER_ROLE, msg.sender);
         _grantRole(MINTER_ROLE, msg.sender);

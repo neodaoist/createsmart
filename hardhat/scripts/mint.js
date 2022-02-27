@@ -1,7 +1,7 @@
 const { ethers } = require("hardhat");
 const { getContractAt } = require("@nomiclabs/hardhat-ethers/internal/helpers");
 require('dotenv').config();
-const { API_URL, PRIVATE_KEY, PUBLIC_KEY, ONEOFONE_ADDRESS } = process.env;
+const { API_URL, PRIVATE_KEY, PUBLIC_KEY, NFT_ADDRESS } = process.env;
 
 async function main() {
   const provider = ethers.getDefaultProvider("ropsten", {
@@ -9,10 +9,10 @@ async function main() {
   });
 
   const WALLET = new ethers.Wallet(PRIVATE_KEY, provider);
-  const contract = await getContractAt(hre, "SmartArt1of1", ONEOFONE_ADDRESS, WALLET);
+  const contract = await getContractAt(hre, "SmartArt", NFT_ADDRESS, WALLET);
   console.log(contract);
   
-  const result = await contract.safeMint(PUBLIC_KEY, {
+  const result = await contract.mint(PUBLIC_KEY, 1, 10, [], {
     gasLimit: 500_000,
   });
   console.log(result);
