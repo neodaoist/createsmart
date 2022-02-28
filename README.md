@@ -15,12 +15,14 @@ Create Smart is a mobile-first, free trial NFT mint app, built with Web3 beginne
 - Ethereum
 - Slice.so
 - Zora.co
+- Laravel
 - Vue.js
 - ethers.js
 - Hardhat
 - IPFS / Filecoin
 - Figma
 - Tableau
+- Cubase
 - Final Cut Pro
 
 ## 🚀 Create Smart – Ready. Set. Mint. 🙌
