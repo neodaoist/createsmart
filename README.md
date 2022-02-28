@@ -4,7 +4,7 @@
 Web3 offers creators many new opportunities to monetize and distribute their work. But there is still a high barrier of entry for those new to the space.
 
 ## ⚗️ Product Vision
-Create Smart is a mobile-first, free trial NFT mint app, built with Web3 beginners in mind. Our vision is to help onboard the next 1 million creators to Web3, with a gasless first-time UX and an easy-to-understand metrics dashboard.
+Create Smart is a mobile-first, free trial NFT mint app, built with Web3 beginners in mind. Our vision is to help onboard the next 1 million creators to Web3, with a gasless first-time UX and easy-to-understand metrics dashboard.
 
 #### 🎥 [Demo Video](https://www.youtube.com/watch?v=6SLzQm2mHBk)
 #### 💻 [Live Prototype](http://createsmart.art/)
@@ -15,5 +15,12 @@ Create Smart is a mobile-first, free trial NFT mint app, built with Web3 beginne
 - Ethereum
 - Slice.so
 - Zora.co
+- Vue.js
+- ethers.js
+- Hardhat
+- IPFS / Filecoin
+- Figma
+- Tableau
+- Final Cut Pro
 
 ## 🚀 Create Smart – Ready. Set. Mint. 🙌
