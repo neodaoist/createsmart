@@ -3,19 +3,59 @@
         <template v-if="step === 'login'">
             <div class="text-center">
                 <button class="btn btn-primary" @click="connectWallet" style="padding:15px 30px">Connect Wallet</button>
+
+                <p style="margin-top: 40px">
+                    Smart-Art is a new way for creators to connect with fans. Blurring lines between fan/creator, analog/digital, ABC/XYZ, smart-art will
+                </p>
+
+                <div style="color:white; margin-top:10px">Built with 💙 and</div>
+                <div style="margin-top: 10px">
+                    <span style="border: solid 1px white; padding:5px 10px; display: inline-block">Ethereum</span>
+                    <span style="border: solid 1px white; padding:5px 10px; margin:0 10px; display: inline-block">Slice.so</span>
+                    <span style="border: solid 1px white; padding:5px 10px; display: inline-block">Zora.co</span>
+                </div>
             </div>
         </template>
 
         <template v-else-if="submitted === true">
-            <div class="text-center">
+            <div class="text-center" style=" animation: animate 1s linear infinite">
                 <div style="width:60px; height:60px; line-height:70px; background-color: #58D68D; color:white; border-radius:50%; display: inline-block; vertical-align: middle">
                     <i class="fas fa-check" style="font-size: 2rem"></i>
                 </div>
-                <div style="font-size: 2rem; color:white;">Congrats!</div>
+                <div style="font-size: 2rem; color:white">Congrats!</div>
             </div>
 
-            <div class="text-center" style="margin-top: 30px">
-                <button class="btn btn-primary" @click="restart">Mint another one</button>
+            <div class="row" style="margin-top: 30px">
+                <div class="col-sm-6">
+                    <div style="background-color: #343a3f; padding:15px; margin:10px 0">
+                        View on Zora
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div style="background-color: #343a3f; padding:15px; margin:10px 0">
+                        View on LooksRare
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div style="background-color: #343a3f; padding:15px; margin:10px 0">
+                        View on Opensea
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div style="background-color: #343a3f; padding:15px; margin:10px 0">
+                        View on Rarible
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div style="background-color: #343a3f; padding:15px; margin:10px 0">
+                        View on Etherscan
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div @click="restart" style="background-color: #0d6efd; color:white; padding:15px; margin:10px 0">
+                        Mint another one
+                    </div>
+                </div>
             </div>
         </template>
 
@@ -188,7 +228,7 @@ export default {
             if (this.splits === null) {
                 this.splits = {};
 
-                Vue.set(this.splits, 'owner', {address: this.wallet, percent: 100});
+                Vue.set(this.splits, 'owner', {address: this.wallet, percent: 50});
             }
 
             this.goToChoiceStep();
@@ -284,7 +324,7 @@ export default {
 
             setTimeout(() => {
                 this.submitted = true;
-            }, 2500);
+            }, 1200);
         }
     },
 
